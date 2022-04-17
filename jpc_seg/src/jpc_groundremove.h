@@ -40,7 +40,7 @@ using namespace std;
 struct PointXYZIR{
 PCL_ADD_POINT4D;
 float intensity;
-uint16_t ring;
+uint8_t ring;
 EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 }EIGEN_ALIGN16;
 
@@ -49,7 +49,7 @@ POINT_CLOUD_REGISTER_POINT_STRUCT(PointXYZIR,
 (float,y,y)
 (float,z,z)
 (float,intensity,intensity)
-(uint16_t,ring,ring)
+(uint8_t,ring,ring)
 )
 
 struct Index{
@@ -80,7 +80,7 @@ private:
 	pcl::PointCloud<PointXYZIR>::Ptr cloud_;
 	float sensor_height = -1.73;
 
-	int width_  = 2083;
+	int width_  = 2048;
 	int height_ = 64;
 	float max_range_ = 70.0;
 	float min_range = 2.0;

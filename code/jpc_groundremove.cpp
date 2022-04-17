@@ -154,6 +154,9 @@ void JpcGroundRemove::JCP(){
 		}
 
 		Eigen::VectorXf W(24);
+		if(sumD < 1e-9){
+			sumD += 1e-9;
+		}
 		W = D / sumD;
 
 		float score_r(0), score_g(0);
